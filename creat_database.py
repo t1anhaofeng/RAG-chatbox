@@ -7,7 +7,10 @@ from langchain_community.vectorstores import Chroma
 from langchain_openai import OpenAIEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-from Key import DATA_PATH, CHROMA_PATH, API_KEY
+from Key import API_KEY
+
+DATA_PATH = "Data"
+CHROMA_PATH = 'chroma'
 
 def load_documents():
     loader = DirectoryLoader(DATA_PATH, glob = "*.txt")

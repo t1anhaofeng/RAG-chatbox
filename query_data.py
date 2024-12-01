@@ -1,12 +1,12 @@
 import argparse
 
-from langchain_openai import ChatOpenAI
-from langchain_community.embeddings import OpenAIEmbeddings
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_chroma import Chroma
 from langchain_core.prompts import ChatPromptTemplate
 from openai import embeddings, api_key
 
-from Key import CHROMA_PATH, API_KEY
+from Key import API_KEY
+from creat_database import CHROMA_PATH
 
 PROMPT_TEMPLATE = """
 Answer the question based on the following content:
